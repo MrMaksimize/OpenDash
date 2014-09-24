@@ -9,6 +9,5 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
-permalink: pretty
 
 client_id: 42281508241-glga07s4ebjs2ufutloi27lqibnb3l62.apps.googleusercontent.com

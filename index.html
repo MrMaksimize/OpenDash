@@ -8,11 +8,56 @@ layout: default
       </div>
       <!-- /.panel-heading -->
       <div class="panel-body">
-      <section class="Component Chart">
+<!--      <section class="Component Chart">
         <h3 class="Chart-title"></h3>
         <div class="Chart-subtitle">Last 7 days</div>
         <div id="datachart"></div>
-      </section>
+      </section> -->
+      <ga-dashboard>
+
+    <section id="controls">
+      <ga-viewpicker></ga-viewpicker>
+      <ga-datepicker
+        startDate="30daysAgo"
+        endDate="14daysAgo">
+      </ga-datepicker>
+    </section>
+
+    <section id="charts">
+      <ga-chart
+        title="Timeline"
+        type="LINE"
+        metrics="ga:sessions"
+        dimensions="ga:date">
+      </ga-chart>
+
+      <ga-chart
+        title="Sessions (by country)"
+        type="GEO"
+        metrics="ga:sessions"
+        dimensions="ga:country">
+      </ga-chart>
+
+      <ga-chart
+        title="Top Browsers"
+        type="COLUMN"
+        metrics="ga:sessions"
+        dimensions="ga:browser"
+        sort="-ga:sessions"
+        maxResults="5">
+      </ga-chart>
+
+      <ga-chart
+        title="Top pages"
+        type="TABLE"
+        metrics="ga:sessions"
+        dimensions="ga:pagePath"
+        sort="-ga:sessions"
+        maxResults="8">
+      </ga-chart>
+    </section>
+
+  </ga-dashboard>
       </div>
       <!-- /.panel-body -->
     </div>
