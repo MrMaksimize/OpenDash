@@ -18,6 +18,14 @@ $(function() {
     });
 
     /**
+     * Create a new Viewpicker instance to be rendered inside of an
+     * element with the id "viewpicker".
+     */
+    /*var viewpicker = new gapi.analytics.ext.Viewpicker({
+      container: 'viewpicker'
+    }).execute();*/
+
+    /**
      * Create a new DataChart instance with the given query parameters
      * and Google chart options. It will be rendered inside an element
      * with the id "datachert".
@@ -27,21 +35,34 @@ $(function() {
         'metrics': 'ga:sessions',
         'dimensions': 'ga:date',
         'start-date': '7daysAgo',
-        'end-date': 'yesterday',
-        'accountName': "MrMaksimize.com",
-        'propertyName': "MrMaksimize.com",
-        'viewName': "MrMaksimize.com",
-        'ids': "ga:59122748"
+        'end-date': 'yesterday'
       },
       chart: {
         container: 'datachart',
-        type: 'COLUMN',
+        type: 'LINE',
         options: {
-          title: 'Users Over The Past 7 Days',
           width: '100%'
         }
       }
     });
-    dataChart.execute();
+
+    /**
+     * Register a handler to run whenever the user changes the view.
+     * The handler will update the dataChart instance as well as change
+     * its chart title to reflect the newly selected view.
+     */
+    /*viewpicker.on('change', function(data) {
+      dataChart.set({query: data}).execute();
+      this.container.parentNode.querySelector('.Chart-title')
+          .innerHTML = data.propertyName + ' (' + data.viewName + ')';
+    });*/
+
+    var queryData = {
+      accountName: "MrMaksimize.com",
+      propertyName: "MrMaksimize.com",
+      viewName: "MrMaksimize.com",
+      ids: "ga:59122748"
+    }
+    dataChart.set({query: queryData}).execute();
   });
 });
