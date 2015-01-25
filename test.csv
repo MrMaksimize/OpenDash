@@ -1,0 +1,4 @@
+"contact_id","cat_id","contact","category","subcat","phone","address","notes","url"
+2,8,"CODE ENFORCEMENT","ABANDONED HOUSES","INFORMATION",6192365500,"1222 1st Avenue, 5th Floor, MS 511, San Diego, CA 92101","Vacant and Unsecured Structures-Vacant Properties Program","www.sandiego.gov/nccd/"
+3,9,"SD POLICE DEPARTMENT VEHICLE ABATEMENT","ABANDONED VEHICLES","ABANDONED CAR TRUCK OR TRAILER",8584957856,"9265 Aero Drive, MS 732, San Diego, CA 92123","Private property","www.sandiego.gov/police/services/units/traffic/abandonedvehicle/index.shtml"
+4,9,"SAN DIEGO POLICE DEPARTMENT","ABANDONED VEHICLES","AUTO TOWED AWAY-REQUEST",6195312844,"1401 Broadway, MS 710, San Diego, CA 92101","Public Property Reporting (619) 531-2000 Non-Emergency #","www.sandiego.gov/police/services/units/traffic/abandonedvehicle/index.shtml"
